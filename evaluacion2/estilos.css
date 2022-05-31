@@ -6,3 +6,17 @@
 .nav-link{
     color: white !important;
 }
+
+/*
+iframe{
+    margin-left: 80px;
+}
+*/
+
+.redes{
+    filter: brightness(120%);
+}
+
+.redes:hover {
+    filter: brightness(70%);
+}
