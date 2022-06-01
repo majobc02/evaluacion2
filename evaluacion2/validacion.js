@@ -13,12 +13,12 @@ var mensaje = document.formulario.mensaje.value
 
 if(nombre < 3)   
 {
-    alert("Debe poner un nombre valido")
+    alert("Debe ingresar un nombre válido")
     return false
 }
 if(apellido.length < 3 )   
 {
-    alert("Debe poner un apellido valido")
+    alert("Debe ingresar un apellido válido")
     return false
 }
 if (document.formulario.correo.value.indexOf('@') < 0)
@@ -27,38 +27,46 @@ if (document.formulario.correo.value.indexOf('@') < 0)
     return false
 }
 var indice = document.formulario.correo.value.indexOf('@')
-if (document.formulario.correo.value.indexOf('.',indice) < 0)
+if ((document.formulario.correo.value.indexOf('.com',indice) < 0) && (document.formulario.correo.value.indexOf('.cl',indice) < 0)) 
 {
-    alert("El correo debe incluir un punto (ej. gmail.com)")
+    alert("El correo debe incluir un punto y dominio válido (ej: gmail.com o .cl)")
     return false
 }
-var guion = document.formulario.correo.value.charAt(8)
-if(rut<10){
-    alert("El rut debe tener 10 digitos")
+
+if (rut.charAt(8) != "-"){
+    alert("Debe ingresar el rut con guión")
     return false
 }
-if(telefono.length < 9)
+
+
+if(rut.length<10 || rut.length>10){
+    alert("El rut debe tener 10 dígitos")
+    return false
+}
+
+if(telefono.length < 9 || telefono.length > 9)
 {
-    alert("Numero debe 9 digitos")
+    alert("El teléfono debe tener 9 dígitos")
     return false
 }
 if(telefono.charAt(0) != "9")
 {
-    alert("El telefono tiene que empezar por 9")
+    alert("El teléfono debe comenzar con 9")
     return false
 }
 /*comentario*/
 if(categoria == 1)
 {
-    alert("Seleccione una categoria")
+    alert("Seleccione una categoría")
     return false
 }
 if (mensaje == ""){
- alert("Ingrese el mensaje")
+ alert("Ingrese un mensaje")
  return false
 }
-alert("Datos enviados abajo esta el resultado.")
-var resultado = nombre+" "+apellido+"\n"+correo+"\n"+telefono+"\n"+run+"\n"+selected+"\n"+mensaje
+alert("Datos enviados. Revisa abajo el resultado.")
+var resultado = "Nombre: "+nombre+" "+apellido+"\nCorreo: "+correo+"\nTeléfono: "+telefono+"\nRut: "
++rut+"\nCategoría: "+selected+"\nMensaje: "+mensaje
 document.getElementById("resultado").innerHTML = resultado
 
 
