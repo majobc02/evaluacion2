@@ -6,18 +6,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="estilos.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    <!--Se ocupo jquery para confirma el checkbox de terminos y condiciones.-->
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#enviar").on("click", function() {
+          var check_t_c = $("#check").is(":checked");
+          if (!check_t_c) {
+            alert("Debe aceptar las condiciones");
+            event.preventDefault();
+            }
+        });
+    });
+
+    </script>
+
 </head>
 <body>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <span></span>
+      </div>
+      <div class="col">
+        <img style="margin: 20px;" src="img/pngtree.png" height="80" width="80" > 
+      </div>
+      <div class="col">
+        <span></span>
+      </div>
+    </div>
+</div>
+
+<div class="p-3 mb-2 bg-success text-white">
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <!-- <a class="nav-link active" aria-current="page" href="#">Flores y Plantas</a> -->
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Flores y Plantas
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Árboles frutales</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Plantas de interior</a></li> 
+            <li><a class="dropdown-item" href="#">Plantas de exterior</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Flores</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+            <!-- <a class="nav-link active" aria-current="page" href="#">Flores y Plantas</a> -->
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Huerto
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Cuidados de tu huerto</a></li>
+              <li><a class="dropdown-item" href="#">Semillas</a></li> 
+            </ul>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="portada.html">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Nosotros</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Contáctanos</a>
+          </li>            
+    </ul>
+</div>
+
     <div class="container">
         <form action="#" class="form-container" name="formulario">
             <div class="row g-3">
             <!--Nombre y apellido-->    
-                <div class="col">
+                <div class="col-6">
                   <label for="">Nombre*</label>
                   <input type="text" class="form-control" aria-label="First name" name="txt_nombre" id="txt_nombre">
                 </div>
-                <div class="col">
+                <div class="col-6">
                   <label for="">Apellido*</label>
                   <input type="text" class="form-control"  aria-label="Last name" name="txt_apellido" id="txt_apellido">
                 </div>
@@ -63,10 +131,67 @@
               </div>
             <!--Boton-->
               <div class="col-12">
-                <input type="button" value="Enviar" onclick="javascript:void(validar())" >
+                <input type="button" value="Enviar" id="enviar" name="enviar" onclick="javascript:void(validar())" >
               </div>
         </form>
     </div>
+
+    <footer>
+      <div class="p-3 mb-2 bg-success text-white">
+          <h1 class="display-6" style="margin-bottom: 20px; text-align: center; font-size: 1.7rem;"><em>Nuestros favoritos de la semana</em></h1>
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <iframe width="250" height="165" 
+                src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                <!-- style="margin-left: 150px;" -->
+            </iframe>
+              </div>
+              <div class="col">
+                <iframe width="250" height="165" 
+                src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                <!-- style="margin-left: 150px;" -->
+            </iframe>
+              </div>
+              <div class="col">
+                <iframe width="250" height="165" 
+                src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                <!-- style="margin-left: 150px;" -->
+            </iframe>
+              </div>
+            </div>
+          </div>
+          <br><br>
+          <div class="container">
+              <div class="row">
+                <div class="col">
+                  <p class="lead" style="text-align: center;">
+                      Contacto
+                      <br><br>
+                      <a href="#" class="link-light" style="font-size: 17px;">9 8452 4856</a>
+                      <br>
+                      <a href="#" class="link-light" style="font-size: 17px;">contacto@terra.cl</a>
+                  </p>
+                </div>
+                <div class="col">
+                    <p class="lead" style="text-align: center;">
+                      Nuestras redes
+                      <br><br>
+                      <a class="redes" href="#"><img src="img/fb.png" width="50" height="50"></a>
+                      <a class="redes" href="#"><img src="img/ig.png" width="50" height="50"></a>
+                      <a class="redes" href="#"><img src="img/tk.png" width="50" height="50"></a>
+                      <a class="redes" href="#"><img src="img/yt.png" width="50" height="50"></a>
+                    </p>
+                </div>
+                <div class="col">
+                    <p class="lead" style="text-align: center;">
+                        Lorem ipsum
+                    </p>
+                </div>
+              </div>
+            </div>
+      </div>
+  </footer>
     
 
     <script src="validacion.js"></script>
