@@ -25,6 +25,7 @@
 
 </head>
 <body>
+  
   <div class="container">
     <div class="row">
       <div class="col">
@@ -32,8 +33,8 @@
       </div>
       <div class="col">
         <center>
-          <a href="portada.html"><img style="margin: 20px;" src="img/pngtree.png" height="80" width="80" ></a>
-        </center> 
+            <a href="portada.html"><img style="margin: 20px;" src="img/pngtree.png" height="80" width="80" ></a> 
+        </center>
       </div>
       <div class="col">
         <span></span>
@@ -41,9 +42,11 @@
     </div>
 </div>
 
+
 <div class="p-3 mb-2 bg-success text-white">
     <ul class="nav justify-content-center">
         <li class="nav-item">
+          <!-- <a class="nav-link active" aria-current="page" href="#">Flores y Plantas</a> -->
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Flores y Plantas
           </a>
@@ -57,6 +60,7 @@
           </ul>
         </li>
         <li class="nav-item">
+            <!-- <a class="nav-link active" aria-current="page" href="#">Flores y Plantas</a> -->
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Huerto
             </a>
@@ -82,53 +86,51 @@
             <div class="row g-3">
             <!--Nombre y apellido-->    
                 <div class="col-6">
-                  <label for="">Nombre *</label>
+                  <label for="">Nombre*</label>
                   <input type="text" class="form-control" aria-label="First name" name="txt_nombre" id="txt_nombre">
                 </div>
                 <div class="col-6">
-                  <label for="">Apellido *</label>
+                  <label for="">Apellido*</label>
                   <input type="text" class="form-control"  aria-label="Last name" name="txt_apellido" id="txt_apellido">
                 </div>
             </div>
-            <br>
             <!--Correo-->
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Email *</label>
+                <label for="exampleFormControlInput1" class="form-label">Email*</label>
                 <input type="email" class="form-control" id="exampleFormControlInput1" name="correo" itemid="correo">
             </div>
             <!--Rut y telefono-->
             <div class="row g-3">
                 <div class="col">
                     <div class="mb-3">
-                        <label for="" class="form-label">Rut *</label>
+                        <label for="" class="form-label">Rut*</label>
                         <input type="text" class="form-control" name="run" id="run">
                     </div>
                 </div>
                 <div class="col">
                     <div class="mb-3">
-                        <label for="" class="form-label">Teléfono *</label>
+                        <label for="" class="form-label">Telefono*</label>
                         <input type="number" class="form-control" name="txt_telefono" id="txt_telefono">
                     </div>
                 </div>
             </div>            
             <!--Categorias-->
-              <label for="" class="form-label">Categoría</label>
-              <select class="form-select" aria-label="Default select example" name="categoria" id="categoria">
+              <label for="" class="form-label">Categoria</label>
+              <select class="form-select categoria" aria-label="Default select example" name="categoria" id="categoria">
                 <option value="1"></option>
                 <option value="2">One</option>
                 <option value="3">Two</option>
                 <option value="4">Three</option>
               </select>
             <!--Mensaje y checkbox-->
-              <br> 
               <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <textarea class="form-control mensaje" id="mensaje" rows="3"></textarea>
               </div>  
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="check" name="check">
                 <label class="form-check-label" for="flexCheckDefault">
-                  <p>Acepto los <a href="#" class="link-light">Términos y condiciones</a></p>
+                  <p>Acepto los <a href="#">Terminos y condiciones</a></p>
                 </label>
               </div>
             <!--Boton-->
@@ -138,26 +140,40 @@
         </form>
     </div>
 
+    <div class="container">
+      <form action="#" class="form-container" name="resultado">
+          <div class="row g-3">
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">Resultado</label>
+              <textarea class="form-control resultado" id="resultado" rows="3"></textarea>
+            </div>  
+          </div>
+        </div>
+
+    
+
     <footer>
       <div class="p-3 mb-2 bg-success text-white">
-          <h1 class="display-6" style="text-align: center; font-size: 1.7rem;"><em>Nuestros favoritos de la semana</em></h1>
-          <br>
+          <h1 class="display-6" style="margin-bottom: 20px; text-align: center; font-size: 1.7rem;"><em>Nuestros favoritos de la semana</em></h1>
           <div class="container">
             <div class="row">
               <div class="col">
                 <iframe width="250" height="165" 
-                  src="https://www.youtube.com/embed/tYb-Q0R51DM">
-                </iframe>
+                src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                <!-- style="margin-left: 150px;" -->
+            </iframe>
               </div>
               <div class="col">
                 <iframe width="250" height="165" 
-                  src="https://www.youtube.com/embed/e944qjU3cBs">
-                </iframe>
+                src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                <!-- style="margin-left: 150px;" -->
+            </iframe>
               </div>
               <div class="col">
                 <iframe width="250" height="165" 
-                  src="https://www.youtube.com/embed/Jh5oX0VRnzk">
-                </iframe>
+                src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                <!-- style="margin-left: 150px;" -->
+            </iframe>
               </div>
             </div>
           </div>
@@ -185,12 +201,7 @@
                 </div>
                 <div class="col">
                     <p class="lead" style="text-align: center;">
-                      Sobre Nosotros
-                      <br>
-                      <p class="lead" style="font-size: 17px; text-align: center;">
-                        En Terra queremos compartir nuestro amor por la naturaleza. Por esto, nuestros 
-                        blogs te acompañarán en cada paso del proceso de <em>dar amor</em> a flores y plantas.
-                      </p>
+                        Lorem ipsum
                     </p>
                 </div>
               </div>
