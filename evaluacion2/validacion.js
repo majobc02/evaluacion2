@@ -32,6 +32,7 @@ if (document.formulario.correo.value.indexOf('.',indice) < 0)
     alert("El correo debe incluir un punto (ej. gmail.com)")
     return false
 }
+var guion = document.formulario.correo.value.charAt(8)
 if(rut<10){
     alert("El rut debe tener 10 digitos")
     return false
@@ -39,11 +40,6 @@ if(rut<10){
 if(telefono.length < 9)
 {
     alert("Numero debe 9 digitos")
-    return false
-}
-if(telefono.indexOf("+569") == 1)
-{
-    alert("Telefono invalido")
     return false
 }
 if(telefono.charAt(0) != "9")
